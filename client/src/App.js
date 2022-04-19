@@ -5,6 +5,9 @@ import Navbar from "./components/Navbar/Navbar";
 import { getLoggedIn, logout } from "./services/auth";
 import routes from "./config/routes";
 import * as USER_HELPERS from "./utils/userToken";
+import AdminLayout from "./layouts/Admin.js";
+import HomePage from "./pages/HomePage";
+
 
 export default function App() {
   const [user, setUser] = useState(null);
@@ -53,10 +56,12 @@ export default function App() {
     <div className="App">
       <Navbar handleLogout={handleLogout} user={user} />
       <Routes>
-        {/* <Route path="/" element={< HomePage />}></Route> */}
-        {routes({ user, authenticate, handleLogout }).map((route) => (
+        <Route path="/" element={<HomePage />}></Route>
+        <Route path={`/admin`} component={AdminLayout} />
+
+        {/* {routes({ user, authenticate, handleLogout }).map((route) => (
           <Route key={route.path} path={route.path} element={route.element} />
-        ))}
+        ))} */}
       </Routes>
     </div>
   );
