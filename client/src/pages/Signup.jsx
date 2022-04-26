@@ -20,6 +20,7 @@ export default function Signup({ authenticate }) {
   }
 
   function handleFormSubmission(event) {
+    console.log(event)
     event.preventDefault();
     const credentials = {
       username,

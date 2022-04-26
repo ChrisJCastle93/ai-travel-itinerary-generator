@@ -28,7 +28,7 @@ export default function HomePage(props) {
       </h1>
 
       <main className="">
-        {/* <h1>{user.username}</h1> */}
+         { user ? <h1>YES USER FOUND</h1> : <h1>NO USER</h1> }
         <h3>Name my tour</h3>
         <form onSubmit={onSubmit}>
           <input type="text" name="animal" placeholder="Enter an animal" value={animalInput} onChange={(e) => setAnimalInput(e.target.value)} />
