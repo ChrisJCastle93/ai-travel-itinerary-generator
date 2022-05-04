@@ -23,17 +23,13 @@ export default function HomePage(props) {
 
   return (
     <div>
-      <h1>
-        <title>OpenAI Quickstart</title>
-      </h1>
-
       <main className="">
-         { user ? <h1>YES USER FOUND</h1> : <h1>NO USER</h1> }
+         {/* { user ? <h1>YES USER FOUND</h1> : <h1>NO USER</h1> } */}
         <h3>Name my tour</h3>
-        <form onSubmit={onSubmit}>
+        {/* <form onSubmit={onSubmit}>
           <input type="text" name="animal" placeholder="Enter an animal" value={animalInput} onChange={(e) => setAnimalInput(e.target.value)} />
           <input type="submit" value="Generate names" />
-        </form>
+        </form> */}
         <div className="">{result}</div>
       </main>
     </div>
