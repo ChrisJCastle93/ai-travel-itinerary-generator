@@ -1,11 +1,11 @@
 import { Navigate } from "react-router-dom";
-import HomePage from "../pages/HomePage";
-import Login from "../pages/LogIn";
-import InputForm from '../components/Tool/InputForm'
-import Signup from "../pages/Signup";
-import ProtectedPage from "../pages/ProtectedPage";
+import HomePage from "../views/HomePage";
+import Login from "../views/LogIn";
+import ToolContainer  from '../components/Tool/ToolContainer'
+import Signup from "../views/Signup";
+import ProtectedPage from "../views/ProtectedPage";
 import * as PATHS from "../utils/paths";
-import ToolContainer from "../components/Tool/ToolContainer";
+import Dashboard from "../views/Dashboard";
 
 const routes = (props) => {
   const { user } = props;
@@ -25,6 +25,10 @@ const routes = (props) => {
     {
       path: PATHS.LOGINPAGE,
       element: <Login {...props} />,
+    },
+    {
+      path: PATHS.DASH,
+      element: <Dashboard {...props} />,
     },
     {
       path: PATHS.PROTECTEDPAGE,
