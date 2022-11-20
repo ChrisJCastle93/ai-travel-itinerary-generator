@@ -31,6 +31,11 @@ Names:`;
 router.get("/", (req, res, next) => {
   res.json("All good in here");
 });
+
+router.get("/debug-sentry", function mainHandler(req, res) {
+  throw new Error("My first Sentry error!");
+});
+
 /* GET home page */
 router.post("/generate", async (req, res, next) => {
   const completion = await openai.createCompletion("text-ada-001", {
