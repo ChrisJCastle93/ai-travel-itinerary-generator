@@ -8,11 +8,8 @@ const Tracing = require("@sentry/tracing");
 const app = express();
 
 Sentry.init({
-  dsn: "https://dd8d80813ade466cb1ed6ba9735e3f75@o1124349.ingest.sentry.io/6162641",
-  integrations: [
-    new Sentry.Integrations.Http({ tracing: true }),
-    new Tracing.Integrations.Express({ app }),
-  ],
+  dsn: "https://2b480980ea0644fab05b984f252f2fb2@o1124349.ingest.sentry.io/4504190696947712",
+  integrations: [new Sentry.Integrations.Http({ tracing: true }), new Tracing.Integrations.Express({ app })],
   tracesSampleRate: 1.0,
 });
 
