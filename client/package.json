@@ -1,44 +1,22 @@
 {
-  "name": "travel-content-client",
-  "version": "0.1.0",
   "private": true,
-  "dependencies": {
-    "@chakra-ui/icons": "^1.1.7",
-    "@chakra-ui/react": "^1.8.8",
-    "@emotion/react": "^11.9.0",
-    "@emotion/styled": "^11.8.1",
-    "axios": "^0.26.1",
-    "framer-motion": "^6.3.3",
-    "openai": "^2.0.5",
-    "react": "^18.0.0",
-    "react-dom": "^18.0.0",
-    "react-hook-form": "^7.30.0",
-    "react-icons": "^4.3.1",
-    "react-router-dom": "^6.3.0",
-    "react-scripts": "^5.0.1"
-  },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build && echo '/* /index.html 200' | cat >build/_redirects ",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+  "devDependencies": {
+    "nuxt": "3.0.0-rc.13"
   },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+  "dependencies": {
+    "@nuxtjs/vuetify": "^1.12.3",
+    "@pinia/nuxt": "^0.4.3",
+    "eslint": "^8.28.0",
+    "pinia": "^2.0.23",
+    "sass": "^1.56.1",
+    "vuetify": "^3.0.1",
+    "yarn": "^1.22.19"
   }
 }
